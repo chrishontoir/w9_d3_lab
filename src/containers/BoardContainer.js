@@ -45,6 +45,13 @@ class BoardContainer extends Component {
     {
       console.log("Winner", player);
       this.setState({winner: `Winner: ${player}`})
+      const target = document.querySelector('.board-list').childNodes;
+      console.log(target);
+
+      target.forEach((item) => {
+        item.disabled=true;
+        item.classList.add('disabled');
+      })
     }
   }
 
@@ -66,8 +73,10 @@ class BoardContainer extends Component {
   render(){
     return(
       <div className="board-container">
-        <h1>Noughts & Crosses</h1>
-        <p>{this.state.winner}</p>
+        <div className="board-info">
+          <h1>Noughts & Crosses</h1>
+          <p>{this.state.winner}</p>
+        </div>
         <BoardList data={this.state.data} player={this.state.currentPlayer} handleUpdatePosition={this.handleUpdatePosition}/>
       </div>
     )

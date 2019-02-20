@@ -6,6 +6,7 @@ const Cell = ({array, value, player, handleUpdatePosition}) => {
     handleUpdatePosition(array)
     const found = event.target;
     found.disabled=true;
+    found.classList.add('disabled');
   }
 
   return(
