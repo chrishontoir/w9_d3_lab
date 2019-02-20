@@ -1,11 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont,"Lato", "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Luckiest Guy', cursive;
+
 }
 
 code {
@@ -18,9 +20,20 @@ code {
   position:absolute;
   width: 100%;
   height: 100%;
+}
+
+.winner-background {
+  position:absolute;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.apply-background {
+  /* background-image: url(https://cdn.drawception.com/images/panels/2012/4-7/51OGcNFcrX-12.png); */
+
 }
 
 .board-info{
@@ -28,9 +41,18 @@ code {
   text-align: center;
 }
 
+.board-info h1 {
+  font-size: 40px;
+  /* color: white;
+  text-shadow: 0 0 5px black; */
+}
+
 .board-info p {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 700;
+  font-size: 30px;
+  /* color: white;
+  text-shadow: 0 0 5px black; */
 }
 
 .board-list{
@@ -44,14 +66,17 @@ code {
   width: 130px;
   margin-right: 3px;
   height: 130px;
+  line-height: 150px;
   background-color: white;
   border: 1px solid black;
-  font-size: 80px;
+  font-size: 100px;
   font-weight: 700;
+  font-family: 'Luckiest Guy', cursive;
 }
 
 .board-list button:hover {
   background-color: #8CE3E7;
+  cursor: pointer;
 }
 
 button.disabled {
